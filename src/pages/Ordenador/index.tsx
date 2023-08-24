@@ -2,7 +2,7 @@ import styles from './Ordenador.module.scss'
 import opcoes from './opcoes.json'
 import React, { useState } from 'react'
 import classNames from 'classnames'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 interface Props {
   ordenador: string
@@ -24,11 +24,7 @@ export default function Ordenador({ ordenador, setOrdenador }: Props) {
       onBlur={() => setOpen(false)}
     >
       <span> {nomeOrdenador || 'Ordenar por'} </span>
-      {open ? (
-        <MdKeyboardArrowUp size={20} />
-      ) : (
-        <MdKeyboardArrowDown size={20} />
-      )}
+      {open ? <IoIosArrowUp size={20} /> : <IoIosArrowDown size={20} />}
 
       <div
         className={classNames({

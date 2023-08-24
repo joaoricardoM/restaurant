@@ -7,11 +7,12 @@ interface Props {
   busca: string
   filtro: number | null
   ordenador: string
+  ordem: boolean
 }
 
 export default function Itens(props: Props) {
   const [lista, setLista] = useState(Cardapio)
-  const { busca, filtro, ordenador } = props
+  const { busca, filtro, ordenador, ordem } = props
 
   function testaBusca(title: string) {
     const regex = new RegExp(busca, 'i')
@@ -23,26 +24,41 @@ export default function Itens(props: Props) {
     return true
   }
 
+  function ordenaPor(
+    lista: typeof Cardapio,
+    criterio: 'size' | 'serving' | 'price'
+  ) {
+    return lista.sort((a, b) => (a[criterio] > b[criterio] ? 1 : -1))
+  }
+
+  function reverter(lista: typeof Cardapio, ordem: boolean) {
+    return ordem ? lista : lista.reverse()
+  }
+
   function ordernar(novaLista: typeof Cardapio) {
     switch (ordenador) {
       case 'porcao':
-        return novaLista.sort((a, b) => (a.size > b.size ? 1 : -1))
+        return ordenaPor(lista, 'size')
       case 'qtd_pessoas':
-        return novaLista.sort((a, b) => (a.serving > b.serving ? 1 : -1))
+        return ordenaPor(lista, 'serving')
       case 'preco':
-        return novaLista.sort((a, b) => (a.price > b.price ? 1 : -1))
+        return ordenaPor(lista, 'price')
       default:
         return novaLista
     }
   }
 
-  useEffect(() => {
-    const novaLista = Cardapio.filter(
+  function criaLista() {
+    return Cardapio.filter(
       (item) => testaBusca(item.title) && testaFiltro(item.category.id)
     )
+  }
 
-    setLista(ordernar(novaLista))
-  }, [busca, filtro, ordenador])
+  useEffect(() => {
+    const novaLista = criaLista()
+
+    setLista(reverter(ordernar(novaLista), ordem))
+  }, [busca, filtro, ordenador, ordem])
 
   return (
     <div className={styles.itens}>

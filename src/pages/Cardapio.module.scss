@@ -33,9 +33,10 @@
     }
     &__text {
       color: white;
-      font-size: 5rem;
+      font-size: 3rem;
       min-width: 400px;
       width: 40%;
+      font-family: 'Courier New', Courier, monospace;
     }
   }
   
@@ -63,4 +64,9 @@
       margin-bottom: 30px;
       width: 100%;
     }
+  }
+
+  .teste {
+    display: flex;
+    margin-left: 5px;
   }

@@ -37,14 +37,14 @@ export default function Itens(props: Props) {
 
   function ordernar(novaLista: typeof Cardapio) {
     switch (ordenador) {
-      case 'porcao':
-        return ordenaPor(lista, 'size')
-      case 'qtd_pessoas':
-        return ordenaPor(lista, 'serving')
-      case 'preco':
-        return ordenaPor(lista, 'price')
-      default:
-        return novaLista
+    case 'porcao':
+      return ordenaPor(lista, 'size')
+    case 'qtd_pessoas':
+      return ordenaPor(lista, 'serving')
+    case 'preco':
+      return ordenaPor(lista, 'price')
+    default:
+      return novaLista
     }
   }
 

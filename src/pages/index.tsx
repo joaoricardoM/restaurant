@@ -37,7 +37,13 @@ export default function Cardapio() {
         <div className={styles.header__text}>JRM La Trattoria</div>
       </header>
       <section className={styles.cardapio}>
-        <h3 className={styles.cardapio__titulo}>Cardapio</h3>
+        <h3
+          className={`__titulo ${
+            isDarkMode ? 'dark' : styles.cardapio__titulo
+          }`}
+        >
+          Cardapio
+        </h3>
         <Buscardor busca={busca} setBusca={setBusca} />
         <div className={styles.cardapio__filtros}>
           <Filtros filtro={filtro} setFiltro={setFiltro} />

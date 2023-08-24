@@ -3,6 +3,7 @@
 
 .menu {
     padding: 20px $padding-horizontal;
+    position: relative;
     @media (max-width: $desktop_xsm) {
       padding: 20px $padding-horizontal-mobile;
     }
@@ -70,3 +71,37 @@
     display: flex;
     margin-left: 5px;
   }
+
+  $button-size: 40px; // Tamanho do botão
+$icon-size: 24px;   // Tamanho do ícone
+
+.square_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $button-size;
+  height: $button-size;
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 50%; /* Isso cria um botão circular */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff; /* Cor de fundo do botão */
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05); /* Efeito de escala no hover */
+  }
+  
+
+  svg {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}
+
+.dark_button {
+  position: absolute;
+  bottom: 30px; /* Espaço a partir do final da página */
+  right: 350px; /* Espaço a partir da borda direita */
+}

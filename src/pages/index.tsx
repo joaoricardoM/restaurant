@@ -6,6 +6,8 @@ import Filtros from './filtros'
 import Ordenador from './Ordenador'
 import Itens from './itens'
 import Crescente from './Crescente'
+import '../styles-dark.scss'
+import { BsSunFill, BsMoonFill } from 'react-icons/bs'
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('')
@@ -13,10 +15,23 @@ export default function Cardapio() {
   const [ordenador, setOrdenador] = useState('')
   const [ordem, setOrdem] = useState(true)
 
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode)
+    document.body.classList.toggle('dark', !isDarkMode)
+  }
+
   return (
     <main>
       <nav className={styles.menu}>
         <Logo />
+        <button
+          className={`${styles.square_button} ${styles.dark_button}`}
+          onClick={toggleDarkMode}
+        >
+          {isDarkMode ? <BsSunFill /> : <BsMoonFill />}
+        </button>
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>JRM La Trattoria</div>

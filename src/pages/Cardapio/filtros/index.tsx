@@ -3,11 +3,11 @@ import filtros from './filtros.json'
 import styles from './Filtros.module.scss'
 import classNames from 'classnames'
 
-type IOption = typeof filtros[0];
+type IOption = (typeof filtros)[0]
 
 interface Props {
-  filtro: number | null;
-  setFiltro: React.Dispatch<React.SetStateAction<number | null>>;
+  filtro: number | null
+  setFiltro: React.Dispatch<React.SetStateAction<number | null>>
 }
 
 export default function Filtros({ filtro, setFiltro }: Props) {
@@ -22,7 +22,7 @@ export default function Filtros({ filtro, setFiltro }: Props) {
         <button
           className={classNames({
             [styles.filtros__filtro]: true,
-            [styles['filtros__filtro--ativo']]: filtro === option.id,
+            [styles['filtros__filtro--ativo']]: filtro === option.id
           })}
           key={option.id}
           onClick={() => selecionarFiltro(option)}

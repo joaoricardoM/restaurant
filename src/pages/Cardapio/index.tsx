@@ -1,13 +1,12 @@
 import styles from './Cardapio.module.scss'
-import { ReactComponent as Logo } from '../assets/logo.svg'
-import Buscardor from './Cardapio/Buscador'
+import Buscardor from './Buscador'
 import { useState } from 'react'
-import Filtros from './Cardapio/filtros'
-import Ordenador from './Cardapio/Ordenador'
-import Itens from './Cardapio/itens'
-import Crescente from './Cardapio/Crescente'
-import '../styles-dark.scss'
-import { BsSunFill, BsMoonFill } from 'react-icons/bs'
+import Filtros from './filtros'
+import Ordenador from './Ordenador'
+import Itens from './itens'
+import Crescente from './Crescente'
+import '../../styles-dark.scss'
+import Menu from '../../components/Menu'
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('')
@@ -15,23 +14,12 @@ export default function Cardapio() {
   const [ordenador, setOrdenador] = useState('')
   const [ordem, setOrdem] = useState(true)
 
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-    document.body.classList.toggle('dark', !isDarkMode)
-  }
+  const [isDarkMode] = useState(false)
 
   return (
     <main>
       <nav className={styles.menu}>
-        <Logo />
-        <button
-          className={`${styles.square_button} ${styles.dark_button}`}
-          onClick={toggleDarkMode}
-        >
-          {isDarkMode ? <BsSunFill /> : <BsMoonFill />}
-        </button>
+        <Menu />
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>JRM La Trattoria</div>

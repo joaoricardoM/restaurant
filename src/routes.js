@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
-import Cardapio from './pages'
+import Cardapio from './pages/Cardapio'
 
 export default function AppRouter() {
   return (

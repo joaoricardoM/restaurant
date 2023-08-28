@@ -1,4 +1,3 @@
-import Menu from '../../components/Menu'
 import Cardapio from '../../data/cardapio.json'
 import styles from './home.module.scss'
 
@@ -9,7 +8,6 @@ export default function Home() {
     .splice(0, 3)
   return (
     <section>
-      <Menu />
       <h3 className={styles.titulo}>Recomendações da cozinha</h3>
       <div className={styles.recomendados}>
         {pratosRecomendados.map((item) => (

@@ -14,4 +14,23 @@ body.dark {
     font-size: 3rem;
     margin-bottom: 30px;
   }
+
+  .__link {
+    color: $dark;
+    font-size: 24px;
+    margin-bottom: 30px;
+    list-style-type: none;
+      padding: 0 20px;
+      a {
+        color: $dark;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: .2s ease;
+        &:hover {
+          color: $dark-grey;
+        }
+      }
+  }
 }

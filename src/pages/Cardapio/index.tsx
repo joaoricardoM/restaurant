@@ -6,6 +6,7 @@ import Ordenador from './Ordenador'
 import Itens from './itens'
 import Crescente from './Crescente'
 import '../../styles-dark.scss'
+import stylesTema from '../../styles/Tema.module.scss'
 
 export default function Cardapio() {
   const [busca, setBusca] = useState('')
@@ -17,9 +18,7 @@ export default function Cardapio() {
 
   return (
     <section className={styles.cardapio}>
-      <h3
-        className={`__titulo ${isDarkMode ? 'dark' : styles.cardapio__titulo}`}
-      >
+      <h3 className={`__titulo ${isDarkMode ? 'dark' : stylesTema.titulo}`}>
         Cardapio
       </h3>
       <Buscardor busca={busca} setBusca={setBusca} />

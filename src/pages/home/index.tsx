@@ -10,7 +10,7 @@ export default function Home() {
     .splice(0, 3)
   return (
     <section>
-      <h3 className={stylesTema.titulo}>Recomendações da cozinha</h3>
+      <h3 className={stylesTema.titulo}>Recomendações</h3>
       <div className={styles.recomendados}>
         {pratosRecomendados.map((item) => (
           <div key={item.id} className={styles.recomendado}>

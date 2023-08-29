@@ -4,10 +4,12 @@ import Cardapio from './pages/Cardapio'
 import Menu from './components/Menu'
 import Default from './components/DefaultPage'
 import Sobre from './pages/Sobre'
+import Footer from './components/Footer'
+import NotFound from './pages/NotFound'
 
 export default function AppRouter() {
   return (
-    <main>
+    <main className="container">
       <Router>
         <Menu />
         <Routes>
@@ -16,7 +18,9 @@ export default function AppRouter() {
             <Route path="Cardapio" element={<Cardapio />} />
             <Route path="Sobre" element={<Sobre />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
     </main>
   )

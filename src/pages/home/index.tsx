@@ -2,12 +2,20 @@ import Cardapio from '../../data/cardapio.json'
 import styles from './home.module.scss'
 import stylesTema from '../../styles/Tema.module.scss'
 import nossaCasa from '../../assets/nossa_casa.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
   let pratosRecomendados = [...Cardapio]
   pratosRecomendados = pratosRecomendados
     .sort(() => 0.5 - Math.random())
     .splice(0, 3)
+
+  const navigate = useNavigate()
+
+  function redirect(prato: (typeof Cardapio)[0]) {
+    navigate(`/prato/${prato.id}`, { state: { prato }, replace: true })
+  }
+
   return (
     <section>
       <h3 className={stylesTema.titulo}>Recomendações</h3>
@@ -17,7 +25,13 @@ export default function Home() {
             <div className={styles.recomendado__imagem}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recomendado__botao}> Ver mais </button>
+            <button
+              className={styles.recomendado__botao}
+              onClick={() => redirect(item)}
+            >
+              {' '}
+              Ver mais
+            </button>
           </div>
         ))}
       </div>

@@ -3,6 +3,7 @@ import Home from './pages/home'
 import Cardapio from './pages/Cardapio'
 import Menu from './components/Menu'
 import Default from './components/DefaultPage'
+import Sobre from './pages/Sobre'
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
           <Route path="/" element={<Default />}>
             <Route index element={<Home />} />
             <Route path="Cardapio" element={<Cardapio />} />
+            <Route path="Sobre" element={<Sobre />} />
           </Route>
         </Routes>
       </Router>

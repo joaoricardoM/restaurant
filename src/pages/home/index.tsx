@@ -3,6 +3,7 @@ import styles from './home.module.scss'
 import stylesTema from '../../styles/Tema.module.scss'
 import nossaCasa from '../../assets/nossa_casa.png'
 import { useNavigate } from 'react-router-dom'
+import { Prato } from '../../types/Prato'
 
 export default function Home() {
   let pratosRecomendados = [...Cardapio]
@@ -12,7 +13,7 @@ export default function Home() {
 
   const navigate = useNavigate()
 
-  function redirect(prato: (typeof Cardapio)[0]) {
+  function redirect(prato: Prato) {
     navigate(`/prato/${prato.id}`, { state: { prato }, replace: true })
   }
 

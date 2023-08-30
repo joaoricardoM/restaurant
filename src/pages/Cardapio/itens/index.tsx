@@ -1,5 +1,6 @@
 /* eslint-disable indent */
-import Cardapio from '../../../data/cardapio.json'
+import cardapio from '../../../data/cardapio.json'
+import { Cardapio } from '../../../types/Prato'
 import Item from './item'
 import styles from './itens.module.scss'
 import { useState, useEffect } from 'react'
@@ -12,7 +13,7 @@ interface Props {
 }
 
 export default function Itens(props: Props) {
-  const [lista, setLista] = useState(Cardapio)
+  const [lista, setLista] = useState(cardapio)
   const { busca, filtro, ordenador, ordem } = props
 
   function testaBusca(title: string) {
@@ -25,18 +26,15 @@ export default function Itens(props: Props) {
     return true
   }
 
-  function ordenaPor(
-    lista: typeof Cardapio,
-    criterio: 'size' | 'serving' | 'price'
-  ) {
+  function ordenaPor(lista: Cardapio, criterio: 'size' | 'serving' | 'price') {
     return lista.sort((a, b) => (a[criterio] > b[criterio] ? 1 : -1))
   }
 
-  function reverter(lista: typeof Cardapio, ordem: boolean) {
+  function reverter(lista: typeof cardapio, ordem: boolean) {
     return ordem ? lista : lista.reverse()
   }
 
-  function ordernar(novaLista: typeof Cardapio) {
+  function ordernar(novaLista: typeof cardapio) {
     switch (ordenador) {
       case 'porcao':
         return ordenaPor(lista, 'size')
@@ -50,7 +48,7 @@ export default function Itens(props: Props) {
   }
 
   function criaLista() {
-    return Cardapio.filter(
+    return cardapio.filter(
       (item) => testaBusca(item.title) && testaFiltro(item.category.id)
     )
   }

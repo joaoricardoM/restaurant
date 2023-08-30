@@ -3,12 +3,17 @@ import stylesTema from '../../styles/Tema.module.scss'
 import Casa from '../../assets/sobre/casa.png'
 import massa1 from '../../assets/sobre/massa1.png'
 import massa2 from '../../assets/sobre/massa2.png'
+import { useState } from 'react'
 
 export default function Sobre() {
   const imagens = [massa1, massa2]
+  const [isDarkMode] = useState(false)
+
   return (
     <section>
-      <h3 className={stylesTema.titulo}>Sobre</h3>
+      <h3 className={`__titulo ${isDarkMode ? 'dark' : stylesTema.titulo}`}>
+        Sobre
+      </h3>
       <div className={styles.sobreNos}>
         <img src={Casa} alt="casa Italiana" />
         <div className={styles.sobreNos__texto}>

@@ -1,7 +1,7 @@
 @import "../../styles/variaveis";
 @import "../../styles/breakpoints";
 .footer {
-  background-color: $grey;
+  background-color: $blue;
   display: flex;
   justify-content: space-between;
   padding: 10px $padding-horizontal;
@@ -16,6 +16,7 @@
   }
 
   p {
+    color: rgba(#fff, 0.45);
     font-family: 'Josefin Sans', sans-serif;
   }
 }

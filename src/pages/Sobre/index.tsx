@@ -3,7 +3,7 @@ import stylesTema from '../../styles/Tema.module.scss'
 import Casa from '../../assets/sobre/casa.png'
 import massa1 from '../../assets/sobre/massa1.png'
 import massa2 from '../../assets/sobre/massa2.png'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Sobre() {
   const imagens = [massa1, massa2]

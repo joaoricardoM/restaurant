@@ -1,6 +1,6 @@
 import styles from './Cardapio.module.scss'
 import Buscardor from './Buscador'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Filtros from './filtros'
 import Ordenador from './Ordenador'
 import Itens from './itens'

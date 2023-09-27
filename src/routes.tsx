@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import NotFound from './pages/NotFound'
 import Prato from './pages/Pratos'
 import Admin from './pages/Admin'
+import React from 'react'
 
 export default function AppRouter() {
   return (

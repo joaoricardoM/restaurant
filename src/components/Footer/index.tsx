@@ -1,6 +1,7 @@
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import styles from './Footer.module.scss'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
+import React from 'react'
 
 export default function Footer() {
   return (

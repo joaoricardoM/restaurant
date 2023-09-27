@@ -1,6 +1,7 @@
 import { Prato } from '../../types/Prato'
 import styles from './TagsPrato.module.scss'
 import classNames from 'classnames'
+import React from 'react'
 
 export default function TagsPrato({ category, size, serving, price }: Prato) {
   return (

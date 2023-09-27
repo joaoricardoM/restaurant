@@ -4,7 +4,7 @@ import stylesTema from '../../styles/Tema.module.scss'
 import nossaCasa from '../../assets/nossa_casa.png'
 import { useNavigate } from 'react-router-dom'
 import { Prato } from '../../types/Prato'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Home() {
   let pratosRecomendados = [...Cardapio]

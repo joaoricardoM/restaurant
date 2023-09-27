@@ -4,6 +4,7 @@ import cardapio from '../../data/cardapio.json'
 import TagsPrato from '../../components/TagPratos'
 import NotFound from '../NotFound'
 import Default from '../../components/DefaultPage'
+import React from 'react'
 
 export default function Prato() {
   const { id } = useParams()

@@ -4,11 +4,11 @@
 
 Página de restaurante com cardápios.
 
-| :placard: Vitrine.Dev |                                                                                            |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| :sparkles: Nome       | **La Trattoria**                                                                           |
-| :label: Tecnologias   | React, TypeScript, JavaScript, SASS e HTML5                                                |
-| :rocket: URL          | [https://aluroni-teal.vercel.app/](https://restaurant-git-master-joaoricardom.vercel.app/) |
+| :placard: Vitrine.Dev |                                                                                                                  |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| :sparkles: Nome       | **La Trattoria**                                                                                                 |
+| :label: Tecnologias   | React, TypeScript, JavaScript, SASS e HTML5                                                                      |
+| :rocket: URL          | [https://restaurant-git-master-joaoricardom.vercel.app/](https://restaurant-git-master-joaoricardom.vercel.app/) |
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -17,7 +17,7 @@ Página de restaurante com cardápios.
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
 <div align="center">
- <img alt="logo aluroni" src="https://user-images.githubusercontent.com/91892938/221433308-e2bf1641-8e6d-4290-b2ec-bd07260341f4.svg#vitrinedev" width="500"/>
+ <img alt="logo aluroni" src="https://th.bing.com/th/id/OIP.vJinh7YP22aALX6CjN9kAQHaHY?pid=ImgDet&rs=1" width="300"/>
 </div>
  
 ## Detalhes do projeto
@@ -26,17 +26,17 @@ La Trattoria é um restaurante com seu cardápio online. Você pode escolher qua
 
 ### Página de início
 
- <img align="center" alt="navegando pela página inicio" src="../restaurant/public/home.png" />
+ <img align="center" alt="navegando pela página inicio" src="home.png" />
 
 ### Págnina de cardápio com seleção por categoria, busca e detalhes de pratos
 
- <img align="center" alt="página do cardápio" src="../restaurant/public/Detalhe.png" />
+ <img align="center" alt="página do cardápio" src="Detalhe.png" />
  
- <img align="center" alt="busca e detalhe dos pratos" src="../restaurant/public/Selecao.png" />
+ <img align="center" alt="busca e detalhe dos pratos" src="Selecao.png" />
 
 ### Página sobre
 
-<img align="center" alt="busca e detalhe dos pratos" src="../restaurant/public/Sobre.png" />
+<img align="center" alt="busca e detalhe dos pratos" src="sobre.png" />
 
 _Projeto feito durante curso de "React: Lidando com arquivos estáticos" e "React: Conhecendo a biblioteca React Router" da Alura._
 

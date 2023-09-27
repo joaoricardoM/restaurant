@@ -1,4 +1,3 @@
-import { ReactComponent as Logo } from '../../assets/logo.svg'
 import styles from './Footer.module.scss'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import React from 'react'
@@ -8,7 +7,7 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <p>
-          Conecte-se com a JRM La Trattoria: <br />
+          Conecte-se com a La Trattoria: <br />
           <br />
           <FaFacebookF size={18} style={{ cursor: 'pointer' }} href="#" />{' '}
           &nbsp;&nbsp;
@@ -17,7 +16,12 @@ export default function Footer() {
           <FaTwitter size={18} style={{ cursor: 'pointer' }} href="#" />
         </p>
         <p>Copyright © @2023</p>
-        <Logo />
+        <p>
+          Desenvolvido com
+          <span style={{ fontSize: 28, color: '#ffcce5' }}> &#9825;</span>
+          <span style={{ marginLeft: '8px' }}>by&nbsp;</span>
+          <a href="https://github.com/joaoricardoM">João</a>
+        </p>
       </footer>
     </>
   )

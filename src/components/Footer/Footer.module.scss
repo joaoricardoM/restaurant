@@ -26,6 +26,18 @@
     }
   }
 
+  a{
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: #fff; /* Cor do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s ease; /* Suaviza a transição de cor */
+
+    footer a:hover {
+      color: #007BFF; /* Cor do texto quando o mouse está sobre o link */
+    }
+  }
+
+
   @media(min-width: 320px) and (max-width: $desktop_xsm) {
     flex-direction: column; // Empilhe os elementos verticalmente em telas menores
     justify-content: center; // Centralize verticalmente em telas menores

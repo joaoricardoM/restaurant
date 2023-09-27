@@ -36,7 +36,7 @@ La Trattoria é um restaurante com seu cardápio online. Você pode escolher qua
 
 ### Página sobre
 
-<img align="center" alt="busca e detalhe dos pratos" src="Sobre.png" />
+<img align="center" alt="busca e detalhe dos pratos" src="sobre.png" />
 
 _Projeto feito durante curso de "React: Lidando com arquivos estáticos" e "React: Conhecendo a biblioteca React Router" da Alura._
 

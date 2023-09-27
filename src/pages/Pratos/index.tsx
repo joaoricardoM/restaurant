@@ -22,8 +22,7 @@ export default function Prato() {
           element={
             <>
               <button className={styles.voltar} onClick={() => navigate(-1)}>
-                {' '}
-                {'<Voltar'}{' '}
+                Voltar
               </button>
               <section className={styles.container}>
                 <h1 className={styles.titulo}>{prato.title}</h1>

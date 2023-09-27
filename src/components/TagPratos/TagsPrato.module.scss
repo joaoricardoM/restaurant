@@ -22,7 +22,7 @@ div {
   }
   &__tipo {
     align-items: center;
-    border-radius: 2px;
+    border-radius: 10px;
     display: flex;
     font-weight: bold;
     height: 40px;
@@ -42,6 +42,11 @@ div {
     &__veganos {
       background-color: $veganos;
     }
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      padding: 10px 20px; // Reduza o espaço interno das tags em telas menores
+      font-size: 1rem; // Reduza o tamanho da fonte em telas menores
+    }
+    
   }
   &__porcao,
   &__qtdpessoas,
@@ -51,9 +56,21 @@ div {
     font-size: 1.25rem;
     font-weight: bold;
     justify-content: center;
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      font-size: 1rem; // Reduza o tamanho da fonte em telas menores
+    }
+
   }
   &__valor {
     color: $red;
     font-size: 1.7rem;
+
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      font-size: 1.25rem; // Reduza o tamanho da fonte em telas menores
+    }
+  }
+
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    justify-content: flex-start; 
   }
 }

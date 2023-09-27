@@ -40,7 +40,9 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <h3 className={stylesTema.titulo}>Nossa Casa</h3>
+      <h3 className={`__titulo ${isDarkMode ? 'dark' : stylesTema.titulo}`}>
+        Nossa Casa
+      </h3>
       <div className={styles.nossaCasa}>
         <img src={nossaCasa} alt="Casa Italiana" />
         <div className={styles.nossaCasa__endereco}>

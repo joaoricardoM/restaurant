@@ -24,5 +24,19 @@
     min-width: 400px;
     width: 40%;
     font-family: 'Courier New', Courier, monospace;
+
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      font-size: 2rem; // Reduza o tamanho da fonte em telas menores
+      min-width: auto; // Remova a largura mínima
+      width: 100%; // Ajuste a largura para 80% em telas menores
+      text-align: center; // Centralize o texto horizontalmente
+      margin-top: 20px; // Adicione um espaçamento superior
+    }
+
+  }
+  
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    flex-direction: row; 
+    
   }
 }

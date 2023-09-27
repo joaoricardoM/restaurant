@@ -1,7 +1,21 @@
+@import '../../../styles/variaveis';
+@import '../../../styles/breakpoints';
+
 .itens {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
     width: 100%;
+
+    @media (min-width: 320px) and (max-width: $desktop_xsm){
+      flex-direction: column; // Empilhar os itens verticalmente em telas menores
+      gap: 20px; // Reduz o 
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row; // Restaurar a direção para linha em telas maiores
+      flex-wrap: wrap; // Permitir que os itens quebrem para a próxima linha em telas maiores
+      justify-content: space-between; // Distribuir os itens horizontalmente em telas maiores
+    }
   }

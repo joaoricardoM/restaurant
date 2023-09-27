@@ -7,7 +7,7 @@ export default function Default() {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.header__text}>JRM La Trattoria</div>
+        <div className={styles.header__text}>La Trattoria</div>
       </header>
       <div className={stylesTema.container}>
         <Outlet />

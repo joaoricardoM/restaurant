@@ -12,9 +12,16 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    padding: 10px $padding-horizontal-mobile;
+  }
 }
 .titulo {
   color: $dark;
   font-size: 3rem;
   margin-bottom: 30px;
+
+  @media (min-width: 320px) and (max-width: $desktop_xsm) {
+    font-size: 1.5rem;
+  }
 }

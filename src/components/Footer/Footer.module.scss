@@ -18,5 +18,17 @@
   p {
     color: rgba(#fff, 0.45);
     font-family: 'Josefin Sans', sans-serif;
+
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      text-align: center; // Centralize o texto horizontalmente
+      margin: 20px 5px; // Adicione espaçamento superior e inferior para separar os parágrafos
+      width: 100%;
+    }
+  }
+
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    flex-direction: column; // Empilhe os elementos verticalmente em telas menores
+    justify-content: center; // Centralize verticalmente em telas menores
+    width: 100%;
   }
 }

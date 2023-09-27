@@ -1,4 +1,4 @@
-/* eslint-disable indent */
+/* eslint-disable react-hooks/exhaustive-deps */
 import cardapio from '../../../data/cardapio.json'
 import { Cardapio } from '../../../types/Prato'
 import Item from './item'

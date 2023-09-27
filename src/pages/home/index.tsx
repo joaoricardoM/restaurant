@@ -4,7 +4,7 @@ import stylesTema from '../../styles/Tema.module.scss'
 import nossaCasa from '../../assets/nossa_casa.png'
 import { useNavigate } from 'react-router-dom'
 import { Prato } from '../../types/Prato'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Home() {
   let pratosRecomendados = [...Cardapio]
@@ -40,7 +40,9 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <h3 className={stylesTema.titulo}>Nossa Casa</h3>
+      <h3 className={`__titulo ${isDarkMode ? 'dark' : stylesTema.titulo}`}>
+        Nossa Casa
+      </h3>
       <div className={styles.nossaCasa}>
         <img src={nossaCasa} alt="Casa Italiana" />
         <div className={styles.nossaCasa__endereco}>

@@ -1,4 +1,5 @@
 @import '../../styles/variaveis';
+@import '../../styles/breakpoints';
 
 .recomendados {
   border-radius: 2px;
@@ -6,11 +7,25 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
+
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    gap: 20px; // Reduz o espaçamento entre os itens em telas menores
+    justify-content: center; // Centraliza os itens horizontalmente
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column; // Empilha os itens verticalmente em telas menores
+    align-items: center; // Centraliza os itens verticalmente
+  }
 }
 .recomendado {
   &__imagem {
     width: 300px;
     margin-bottom: 10px;
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      width: 100%; // Faz a imagem ocupar toda a largura do contêiner
+      max-width: 300px; // Define um tamanho máximo para a imagem
+    }
     img {
       border-radius: 8px;
       width: 100%;
@@ -56,5 +71,18 @@
     left: 0;
     right: 0;
     width: 200px;
+
+    @media(min-width: 320px) and (max-width: $desktop_xsm) {
+      bottom: -35px; // Ajusta a posição vertical do elemento
+      height: 70px; // Reduz a altura do elemento
+      width: 80%; // Reduz a largura do elemento para telas menores
+    }
+
   }
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    margin-bottom: 50px; // Reduz a margem inferior em telas menores
+    width: 100%; // Define a largura para 100% em telas menores
+  }
+
+
 }

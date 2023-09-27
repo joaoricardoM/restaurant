@@ -5,8 +5,9 @@
   align-items: center;
   background-color: $grey;
   border: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-radius: 14px;
   display: flex;
   font-size: 1rem;
   font-weight: bold;
@@ -47,5 +48,12 @@
       cursor: pointer;
       color: white;
     }
+  }
+
+  @media(min-width: 320px) and (max-width: $desktop_xsm) {
+    padding: 0 20px;
+    min-width: 150px; // Remova a largura mínima para permitir ajuste flexível
+    width: 100%; // Largura total em telas menores
+    padding: 0 10px; // Reduz ainda mais o espaçamento interno em telas menores
   }
 }

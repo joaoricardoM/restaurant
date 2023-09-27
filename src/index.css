@@ -1,18 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 body {
-  background-color: #f6f6f6f6;
+  background-color: #f6f6f6;
+  margin: 0; /* Remova as margens padrão para evitar espaçamento indesejado */
+  padding: 0; /* Remova o preenchimento padrão */
+  font-size: 16px; /* Defina um tamanho de fonte padrão */
+  font-family: 'Italiana', serif;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Italiana', serif;
 }
 
 #root > main.container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Consulta de mídia para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduza o tamanho da fonte para dispositivos móveis */
+  }
+  
+  /* Adicione estilos específicos para dispositivos móveis aqui */
+}
+
+/* Consulta de mídia para tablets e telas menores */
+@media (max-width: 1024px) {
+  /* Adicione estilos específicos para tablets e telas menores aqui */
+}
+
+/* Consulta de mídia para telas maiores (desktop) */
+@media (min-width: 1025px) {
+  /* Adicione estilos específicos para desktop aqui */
 }

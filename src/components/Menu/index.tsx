@@ -4,6 +4,7 @@ import styles from './Menu.module.scss'
 import { BsSunFill, BsMoonFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import '../../styles-dark.scss'
+import React from 'react'
 
 export default function Menu() {
   const rotas = [

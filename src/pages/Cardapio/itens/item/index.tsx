@@ -2,6 +2,7 @@ import styles from './Item.module.scss'
 import { Prato } from '../../../../types/Prato'
 import TagsPrato from '../../../../components/TagPratos'
 import { useNavigate } from 'react-router-dom'
+import React from 'react'
 
 export default function Item(props: Prato) {
   const { id, title, description, photo } = props

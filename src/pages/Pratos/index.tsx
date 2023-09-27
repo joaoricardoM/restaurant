@@ -4,6 +4,7 @@ import cardapio from '../../data/cardapio.json'
 import TagsPrato from '../../components/TagPratos'
 import NotFound from '../NotFound'
 import Default from '../../components/DefaultPage'
+import React from 'react'
 
 export default function Prato() {
   const { id } = useParams()
@@ -21,8 +22,7 @@ export default function Prato() {
           element={
             <>
               <button className={styles.voltar} onClick={() => navigate(-1)}>
-                {' '}
-                {'<Voltar'}{' '}
+                Voltar
               </button>
               <section className={styles.container}>
                 <h1 className={styles.titulo}>{prato.title}</h1>

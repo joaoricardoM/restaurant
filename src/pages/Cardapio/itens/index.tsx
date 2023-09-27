@@ -1,9 +1,10 @@
-/* eslint-disable indent */
+/* eslint-disable react-hooks/exhaustive-deps */
 import cardapio from '../../../data/cardapio.json'
 import { Cardapio } from '../../../types/Prato'
 import Item from './item'
 import styles from './itens.module.scss'
 import { useState, useEffect } from 'react'
+import React from 'react'
 
 interface Props {
   busca: string

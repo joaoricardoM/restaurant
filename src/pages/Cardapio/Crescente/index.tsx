@@ -1,6 +1,7 @@
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 import styles from './Crescente.module.scss'
+import React from 'react'
 
 //componente criado para alterar a ordem da listagem, crescente ou decrescente, falta ajustar o css
 interface Props {

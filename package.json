@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,8 @@
   },
   "devDependencies": {
     "classnames": "^2.3.2",
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.2",
     "sass": "^1.56.1"
   }
 }

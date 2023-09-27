@@ -1,0 +1,35 @@
+// styles-dark.scss
+@import '../src/styles/variaveis';
+
+$background-color-dark: #121212;
+$text-color-dark: #ffffff;
+$dark: #fff;
+
+body.dark {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+
+  .__titulo {
+    color: $dark;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .__link {
+    color: $dark;
+    font-size: 24px;
+    list-style-type: none;
+    padding: 0 20px;
+      a {
+        color: $dark;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: .2s ease;
+        &:hover {
+          color: $dark-grey;
+        }
+      }
+  }
+}

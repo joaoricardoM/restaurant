@@ -47,6 +47,7 @@ _Projeto feito durante curso de "React: Lidando com arquivos estáticos" e "Reac
 - Melhoria na responsavidade
 - Implementação para SPA
 - Novos estilos paras as páginas
+- Dark mode
 
 ## Objetivos do projeto
 
